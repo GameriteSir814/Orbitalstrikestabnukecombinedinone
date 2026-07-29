@@ -35,11 +35,13 @@ public class CannonCommand implements CommandExecutor {
         switch (args[0].toLowerCase()) {
             case "add" -> {
                 cannonManager.markItem(hand);
+                p.getInventory().setItemInMainHand(hand); // write the tagged item back into the slot
                 p.sendMessage(Component.text("This fishing rod is now the orbital strike cannon.", NamedTextColor.GREEN));
                 p.sendMessage(Component.text("Right-click = orbital nuke. Shift+right-click = stab.", NamedTextColor.GRAY));
             }
             case "remove" -> {
                 if (cannonManager.unmarkItem(hand)) {
+                    p.getInventory().setItemInMainHand(hand); // write the untagged item back into the slot
                     p.sendMessage(Component.text("This rod is now a normal fishing rod again.", NamedTextColor.YELLOW));
                 } else {
                     p.sendMessage(Component.text("This rod isn't marked as the cannon.", NamedTextColor.RED));

@@ -1,0 +1,16 @@
+name: OrbitalStrike
+version: 1.0.0
+main: com.orbitalstrike.OrbitalStrike
+api-version: '1.21'
+author: EvolutionSMP
+description: Op-marked fishing rod - right-click fires an orbital nuke, shift+right-click fires a precision stab.
+
+commands:
+  osc:
+    description: Mark or unmark the held fishing rod as the orbital strike cannon.
+    usage: /osc <add|remove>
+    permission: orbitalstrike.admin
+
+permissions:
+  orbitalstrike.admin:
+    default: op

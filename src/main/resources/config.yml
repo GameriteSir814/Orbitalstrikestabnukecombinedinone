@@ -1,0 +1,16 @@
+nuke:
+  tnt-count: 500
+  spread-radius: 20
+  drop-height: 30
+  fuse-ticks: 40
+  # TNT spawned per server tick, to avoid an instant lag spike from 500 at once.
+  spawn-batch-size: 25
+  max-range: 150
+
+stab:
+  tnt-count: 30
+  spread-radius: 1.5
+  drop-height: 20
+  fuse-ticks: 30
+  spawn-batch-size: 30
+  max-range: 30
